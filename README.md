@@ -1,16 +1,42 @@
-# Fake-News-Detection
-This project provides a simple yet effective web application to detect fake news using a pre-trained machine learning model. Built with Streamlit, it offers an intuitive interface where users can input news text and instantly get a prediction on whether it's real or fake, along with a confidence score.
+# # Fake News Detection System
 
-Features
-Real-time Prediction: Instantly classify news headlines or articles as "Real News" or "Fake News."
-Confidence Score: Displays the prediction confidence, helping users gauge the reliability of the classification.
-Text Preprocessing: Includes a built-in text cleaning function to prepare input data for the model.
-User-Friendly Interface: Powered by Streamlit for an easy-to-use web application.
+This Streamlit app classifies news text as "Real News" or "Fake News" using a pre-trained machine learning model.
 
-Tech Stack
-Python 3.x
-Streamlit: For building the interactive web application.
-Joblib: For loading the pre-trained machine learning model and TF-IDF vectorizer.
-Scikit-learn: (Implicitly used for model training and TF-IDF vectorization) The underlying library for the saved model.pkl and tfidf_vectorizer.pkl.
+## Features
 
+* Input news text.
+* Get "Real" or "Fake" classification with confidence.
 
+---
+
+## Setup
+
+1.  **Files:** Place `app.py`, `model.pkl`, `tfidf_vectorizer.pkl`, `README.md`, and `requirements.txt` in one folder.
+2.  **Environment (Recommended):**
+    ```bash
+    python -m venv venv
+    source venv/bin/activate # Windows: `venv\Scripts\activate`
+    ```
+3.  **Install:**
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+---
+
+## Usage
+
+1.  Ensure `model.pkl` and `tfidf_vectorizer.pkl` are in the same directory.
+2.  Run the app:
+    ```bash
+    streamlit run app.py
+    ```
+3.  Open in browser (usually `http://localhost:8501`).
+
+---
+
+## Important Files
+
+* `model.pkl`: Your trained ML model.
+* `tfidf_vectorizer.pkl`: Your text vectorizer.
+    *These files are crucial and must be present.*
